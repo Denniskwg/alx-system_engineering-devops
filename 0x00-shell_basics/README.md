@@ -4,3 +4,4 @@
 * 2-bring changes the working directory to the users home directory
 * 3-list displays current working directory in long format
 * 4-listmore lists all including hidden files in current working directory
+* 5-listedfiles lists the files in the current dir owners and groups numerically
