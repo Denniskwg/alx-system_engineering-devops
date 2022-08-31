@@ -13,3 +13,4 @@
 * 11-lists writes the contents of specified files in long format
 * 12-filetype prints the file type of the given file
 * 13-sympoliclink creates a symbolic link 
+* 14-copyhtml copies html files to parent of working dir only if they were not there
