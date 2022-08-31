@@ -5,3 +5,5 @@
 * 3-list displays current working directory in long format
 * 4-listmore lists all including hidden files in current working directory
 * 5-listedfiles lists the files in the current dir owners and groups numerically
+* 6-command creates an empty dir in the tmp dir
+* 7-command moves a file from tmp to another dir in tmp
