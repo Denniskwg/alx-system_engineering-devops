@@ -8,3 +8,4 @@
 * 6-command creates an empty dir in the tmp dir
 * 7-command moves a file from tmp to another dir in tmp
 * 7-command deletes the betty file inside the /tmp/my_first_directory
+* 9-command deletes directory
