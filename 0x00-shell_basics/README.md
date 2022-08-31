@@ -7,3 +7,4 @@
 * 5-listedfiles lists the files in the current dir owners and groups numerically
 * 6-command creates an empty dir in the tmp dir
 * 7-command moves a file from tmp to another dir in tmp
+* 7-command deletes the betty file inside the /tmp/my_first_directory
