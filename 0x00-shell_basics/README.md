@@ -9,3 +9,4 @@
 * 7-command moves a file from tmp to another dir in tmp
 * 7-command deletes the betty file inside the /tmp/my_first_directory
 * 9-command deletes directory
+* 10-back changes current command to previous command
