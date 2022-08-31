@@ -12,3 +12,4 @@
 * 10-back changes current command to previous command
 * 11-lists writes the contents of specified files in long format
 * 12-filetype prints the file type of the given file
+* 13-sympoliclink creates a symbolic link 
