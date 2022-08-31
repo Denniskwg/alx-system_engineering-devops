@@ -10,3 +10,4 @@
 * 7-command deletes the betty file inside the /tmp/my_first_directory
 * 9-command deletes directory
 * 10-back changes current command to previous command
+* 11-lists writes the contents of specified files in long format
