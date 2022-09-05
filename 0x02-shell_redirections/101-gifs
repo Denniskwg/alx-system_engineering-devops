@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a *.gif | cut -d'.' -f 1 | LC_ALL=c sort
+ls -a *.gif | cut -d'.' -f 1 | LC_COLLATE=c sort --ignore-case
