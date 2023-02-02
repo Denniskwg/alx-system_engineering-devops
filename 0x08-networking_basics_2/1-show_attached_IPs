@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # displays all ipv4 ip addresses on current machine
-hostname -I
+echo $(hostname -I)
+echo "127.0.0.1"
