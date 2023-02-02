@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 # displays all ipv4 ip addresses on current machine
-echo $(hostname -I)
-echo "127.0.0.1"
+loop_back=$(grep 127 /etc/hosts | cut -f 1)
+ip_addr=$(hostname -I | cut -d " " -f 1)
+echo "$ip_addr"
+echo "$loop_back"
