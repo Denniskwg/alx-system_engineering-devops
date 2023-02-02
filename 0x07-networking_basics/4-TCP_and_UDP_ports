@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# displays all open ports on the device
+netstat -ltup
