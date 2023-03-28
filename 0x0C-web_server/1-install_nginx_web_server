@@ -1,25 +1,5 @@
 #!/usr/bin/env bash
 #installs nginx web server
-sudo apt-get update
 sudo apt-get -y install nginx
-sudo touch /etc/nginx/nginx.conf
-sudo echo "worker_processes auto;
-pid /run/nginx.pid;
-
-events {
-worker_connections 1024;
-}
-
-http {
-server {
-listen 80;
-server_name example.com;
-location / {
-return 200 "Hello World!";
-root /var/www/html;
-index index.html;
-default_type text/html;
-}
-}
-}" > /etc/nginx/nginx.conf
-sudo service nginx restart
+sudo service nginx start
+echo "Hello World!\n" | sudo tee /usr/share/nginx/html/index.html
