@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # redirects /redirect_me to a different url
+sudo apt-get update
 sudo apt-get install -y nginx
+sudo ufw allow 'Nginx HTTP'
 echo "Hello World!" | sudo tee /var/www/html/index.html
 sudo sed -i '/listen 80 default_server/a rewrite ^/redirect_me https://www.youtube.com/ permanent;' /etc/nginx/sites-available/default
 sudo service nginx restart
