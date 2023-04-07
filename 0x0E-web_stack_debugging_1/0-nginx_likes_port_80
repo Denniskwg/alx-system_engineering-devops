@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # debugs failing port differences between sites-enabled and sites-available
-sudo sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
-sudo service nginx restart
+ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+service nginx start
