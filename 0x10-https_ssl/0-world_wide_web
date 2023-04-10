@@ -1,17 +1,18 @@
 #!/usr/bin/env bash
-
+# prints information about subdomains for the url passed as the first argument
+# or information about specific domain passed as second argument
 func ()
 {
 	if [ "$#" -eq 1 ]
 	then
-		names=('www.denniswaruhiu.tech' 'lb-01.denniswaruhiu.tech' 'web-01.denniswaruhiu.tech' 'web-02.denniswaruhiu.tech')
+		names=('www' 'lb-01' 'web-01' 'web-02')
 		for name in "${names[@]}"; do
-		    subdomain=$(echo "$name" | cut -d'.' -f 1)
-		    dig "$name" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$subdomain" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
+		    #subdomain=$(echo "$name" | cut -d'.' -f 1)
+		    dig "$name.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$name" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
 		done
 	elif [ "$#" -eq 2 ]
 	then
-		name="$2.denniswaruhiu.tech"
+		name="$2.$1"
 		dig "$name" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$2" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
 	fi
 }
