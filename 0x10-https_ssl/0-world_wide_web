@@ -8,7 +8,7 @@ func ()
 		names=('www' 'lb-01' 'web-01' 'web-02')
 		for name in "${names[@]}"; do
 		    #subdomain=$(echo "$name" | cut -d'.' -f 1)
-		    dig "$name.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$name" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
+		    dig "$name.$1" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$name" '{print "The subdomain "name" is a " $4 " record and points to " $5}'
 		done
 	elif [ "$#" -eq 2 ]
 	then
