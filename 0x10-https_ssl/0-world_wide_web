@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+func ()
+{
+	if [ "$#" -eq 1 ]
+	then
+		names=('www.denniswaruhiu.tech' 'lb-01.denniswaruhiu.tech' 'web-01.denniswaruhiu.tech' 'web-02.denniswaruhiu.tech')
+		for name in "${names[@]}"; do
+		    subdomain=$(echo "$name" | cut -d'.' -f 1)
+		    dig "$name" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$subdomain" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
+		done
+	elif [ "$#" -eq 2 ]
+	then
+		name="$2.denniswaruhiu.tech"
+		dig "$name" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$2" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
+	fi
+}
+func $1 $2
