@@ -13,7 +13,7 @@ func ()
 	elif [ "$#" -eq 2 ]
 	then
 		name="$2.$1"
-		dig "$name" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$2" '{print "The sub-domain "name" is a " $4 " record and points to " $5}'
+		dig "$name" | grep -A1 'ANSWER SECTION:' | tail -1 | awk -v name="$2" '{print "The subdomain "name" is a " $4 " record and points to " $5}'
 	fi
 }
 func $1 $2
