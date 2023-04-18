@@ -3,6 +3,7 @@
 #configures nginx to listen on port 8080
 
 pkill apache2
+wait
 sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
 sed -i 's/80/8080/g' /etc/nginx/sites-available/default
 ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
