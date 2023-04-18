@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+#runs the whoami command under the user passed as an argument
+#uid=$(id $1| cut -d ' ' -f 1 | cut -d '(' -f 1 | cut -d '=' -f 2)
+#usermod --shell /bin/bash "$1"
+sudo -u "$1" whoami
