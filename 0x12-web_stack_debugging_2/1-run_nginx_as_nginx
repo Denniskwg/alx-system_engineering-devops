@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-#runs nginx using the standard nginx user instead of root user
-pkill nginx
+#runs nginx using the standard nginx user instead of root user and
+#configures nginx to listen on port 8080
 pkill apache2
 wait $!
 sed -i 's/#user www-data;/user nginx;/' /etc/nginx/nginx.conf
