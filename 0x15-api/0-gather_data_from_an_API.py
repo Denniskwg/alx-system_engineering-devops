@@ -23,7 +23,7 @@ if __name__ == "__main__":
                 completed = completed + 1
             tasks.append(r[i])
 
-    s = "Employee {} is done with tasks({}/{})".format(name, completed, num)
+    s = "Employee {} is done with tasks({}/{}):".format(name, completed, num)
     print(s)
     for task in tasks:
         if task.get('completed'):
