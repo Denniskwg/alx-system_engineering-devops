@@ -2,10 +2,7 @@
 """0-subs defines a function number_of_subscribers that queries the
 reddit api and returns number of subscribers for a specific subreddit
 """
-
-
 import requests
-import json
 
 
 def number_of_subscribers(subreddit):
